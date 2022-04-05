@@ -21,4 +21,8 @@ public abstract class Compte {
         if (montant < this.solde)
             this.solde += montant;
     }
+
+    public String toString(){
+        return "Ce compte a un solde de : "+this.solde+" euros";
+    }
 }
