@@ -24,10 +24,10 @@ public class Owner {
     public void startAllVehicules(){
         for (Vehicule vehicule : this.vehiculeList) {
             vehicule.start();
-            if (vehicule.getClass() == Boat.class){
+            if (vehicule instanceof Boat){
                 ((Boat) vehicule).sail();
-            }else if (vehicule.getClass() == Plane.class){
-                ((Plane) vehicule).fly();
+            }else if (vehicule instanceof Plane p){
+                p.fly();
             }
 
         }
