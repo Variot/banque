@@ -75,8 +75,10 @@ public class MainEntry {
         moi.add(car2);
         moi.add(plane1);
         moi.add(plane2);
+
         System.out.println("nb vehicule ferrari");
         System.out.println(moi.countByBrand("Ferrari"));
+        
         boat1.Start();
         boat1.Stop();
         boat1.DisplayEngine();
