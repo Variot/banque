@@ -53,6 +53,6 @@ public class MainEntry {
         castex.doubleAttack(gandalf);
         kratos.addRage(20);
         kratos.useRage(castex);
-
+        gandalf.spellCast(kratos);
     }
 }

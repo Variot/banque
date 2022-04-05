@@ -21,7 +21,7 @@ public class Berserker extends Humanoid{
 
     public void useRage(Humanoid h){
         if (this.rage >=8 ){
-            System.out.println(this.name+" unleash his inner rage");
+            System.out.println("\n"+this.name+" unleash his inner rage");
             h.receiveDamage(this.force*1.5);
             this.rage -= 8;
             System.out.println("    "+this.name+" lost 8 rage ("+this.rage+" total rage)");

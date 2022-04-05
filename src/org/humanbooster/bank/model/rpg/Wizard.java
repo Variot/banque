@@ -15,8 +15,10 @@ public class Wizard extends Humanoid{
 
     public void spellCast(Humanoid h) {
         if (this.mana >= 10){
+            System.out.println("\n"+this.name+" cast a spell on "+h.name);
             h.receiveDamage(this.force + this.intelligence);
             this.mana -= 10;
+            System.out.println("    "+this.name+" consumed 10 mana ("+this.mana+" mana left)");
         }
     }
 
@@ -24,7 +26,7 @@ public class Wizard extends Humanoid{
         if (this.mana >= 3) {
             this.shield = true;
             this.hitsOnShield = 5;
-            System.out.println(this.name+" activate his shield");
+            System.out.println("\n"+this.name+" activate his shield");
         }
     }
 

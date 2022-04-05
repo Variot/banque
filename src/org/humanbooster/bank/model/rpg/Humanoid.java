@@ -12,7 +12,7 @@ public abstract class Humanoid {
     }
 
     public void attack(Humanoid h){
-        System.out.println(this.name+" has attacked "+h.name);
+        System.out.println("\n"+this.name+" has attacked "+h.name);
         h.receiveDamage(this.force);
     }
 
