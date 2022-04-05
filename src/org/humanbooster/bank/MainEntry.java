@@ -23,7 +23,7 @@ public class MainEntry {
         System.out.println(cs);
 
         System.out.println("    Compte Epargne");
-        CompteEpargne ce = new CompteEpargne(0.75f);
+        CompteEpargne ce = new CompteEpargne(0.75f,0);
         ce.verser(200);
         System.out.println(ce);
         ce.retirer(250);
@@ -35,7 +35,7 @@ public class MainEntry {
         System.out.println(ce);
 
         System.out.println("    Compte Payant");
-        ComptePayant cp = new ComptePayant();
+        ComptePayant cp = new ComptePayant(0);
         cp.verser(200);
         System.out.println(cp);
         cp.retirer(250);

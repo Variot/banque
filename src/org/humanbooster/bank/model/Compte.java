@@ -7,10 +7,10 @@ public abstract class Compte {
     private static int countComptes = 0;
 
 
-    public Compte() {
+    public Compte(float solde) {
         Compte.countComptes++;
         this.id = Compte.countComptes;
-        this.solde = 0;
+        this.solde = solde;
     }
 
     public void verser(float montant){

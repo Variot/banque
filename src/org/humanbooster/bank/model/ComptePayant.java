@@ -2,6 +2,11 @@ package org.humanbooster.bank.model;
 
 public class ComptePayant extends Compte{
 
+    public ComptePayant(float solde) {
+        super(solde);
+    }
+
+
     public void verser(float montant){
         if (this.solde + montant - 1 > 0)
             this.solde += montant - 1;
