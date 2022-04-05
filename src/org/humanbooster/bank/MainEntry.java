@@ -6,15 +6,20 @@ import org.humanbooster.bank.model.CompteSimple;
 import org.humanbooster.bank.model.rpg.Berserker;
 import org.humanbooster.bank.model.rpg.Warrior;
 import org.humanbooster.bank.model.rpg.Wizard;
+import org.humanbooster.bank.model.vehicule.Boat;
+import org.humanbooster.bank.model.vehicule.Car;
+import org.humanbooster.bank.model.vehicule.Plane;
 
 public class MainEntry {
     public static void main(String[] args) {
-       testRpg();
+        testVehicule();
+        //testBank();
+        //testRpg();
     }
 
     public static void testBank(){
         System.out.println("    Compte Simple");
-        CompteSimple cs = new CompteSimple(100);
+        CompteSimple cs = new CompteSimple(100,0);
         cs.verser(200);
         System.out.println(cs);
         cs.retirer(250);
@@ -55,5 +60,22 @@ public class MainEntry {
         kratos.addRage(20);
         kratos.useRage(castex);
         gandalf.spellCast(kratos);
+    }
+    public static void testVehicule(){
+        Boat boat1 = new Boat("Zodiac",580);
+        Car car1 = new Car("Ferrari",650);
+        Plane plane1 = new Plane("Airbus",3000);
+
+        boat1.Start();
+        boat1.Stop();
+        boat1.DisplayEngine();
+
+        car1.Start();
+        car1.Stop();
+        car1.DisplayEngine();
+
+        plane1.Start();
+        plane1.Stop();
+        plane1.DisplayEngine();
     }
 }

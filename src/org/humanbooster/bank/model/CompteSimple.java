@@ -3,7 +3,8 @@ package org.humanbooster.bank.model;
 public class CompteSimple extends Compte{
     private float decouvert;
 
-    public CompteSimple(float decouvert) {
+    public CompteSimple(float decouvert, float solde) {
+        super(solde);
         this.decouvert = decouvert;
     }
 
