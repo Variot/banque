@@ -19,7 +19,8 @@ public class Wizard extends Humanoid{
             h.receiveDamage(this.force + this.intelligence);
             this.mana -= 10;
             System.out.println("    "+this.name+" consumed 10 mana ("+this.mana+" mana left)");
-        }
+        } else
+            System.out.println("\n"+this.name+" failed to cast a spell (not enough mana)");
     }
 
     public void activateShield(){

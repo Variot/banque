@@ -51,6 +51,7 @@ public class MainEntry {
         gandalf.activateShield();
         castex.attack(gandalf);
         castex.doubleAttack(gandalf);
+        kratos.useRage(castex);
         kratos.addRage(20);
         kratos.useRage(castex);
         gandalf.spellCast(kratos);

@@ -25,7 +25,8 @@ public class Berserker extends Humanoid{
             h.receiveDamage(this.force*1.5);
             this.rage -= 8;
             System.out.println("    "+this.name+" lost 8 rage ("+this.rage+" total rage)");
-        }
+        } else
+            System.out.println("\n"+this.name+" failed to use rage (not enough rage)");
     }
 
 }
