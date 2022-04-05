@@ -8,6 +8,7 @@ public class Warrior extends Humanoid{
     }
 
     public void doubleAttack(Humanoid h){
+        System.out.println(this.name+" launch double attack on "+h.name);
         h.receiveDamage(this.force*0.7);
         h.receiveDamage(this.force*0.7);
         this.doubleAttackReady=false;

@@ -10,10 +10,17 @@ public abstract class Humanoid {
         this.health = health;
         this.force = force;
     }
+
+    public void attack(Humanoid h){
+        System.out.println(this.name+" has attacked "+h.name);
+        h.receiveDamage(this.force);
+    }
+
     public void receiveDamage(double damage) {
         this.health -= damage;
+        System.out.println("    "+this.name+" lost "+damage+"HP ("+this.health+"HP left)");
     }
-    public void attack(Humanoid h){
-        h.receiveDamage(this.force);
+    public String toString(){
+        return this.name+" a "+this.health+"HP";
     }
 }

@@ -24,6 +24,7 @@ public class Wizard extends Humanoid{
         if (this.mana >= 3) {
             this.shield = true;
             this.hitsOnShield = 5;
+            System.out.println(this.name+" activate his shield");
         }
     }
 
@@ -31,15 +32,20 @@ public class Wizard extends Humanoid{
     public void attack(Humanoid h){
         super.attack(h);
         this.mana++;
+        System.out.println("    "+this.name+" gained mana ("+this.mana+" mana total)");
     }
 
     @Override
     public void receiveDamage(double damage){
         if (this.shield){
+            System.out.println("    "+this.name+"'s shield reduced incoming damage");
             super.receiveDamage(damage*0.8);
             this.hitsOnShield--;
-            if (this.hitsOnShield == 0)
+            if (this.hitsOnShield == 0) {
                 this.shield = false;
+                System.out.println("    Shield faded");
+            } else
+                System.out.println("    "+this.hitsOnShield+" shield charge left");
         } else
             super.receiveDamage(damage);
     }
