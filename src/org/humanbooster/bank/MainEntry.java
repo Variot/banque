@@ -8,6 +8,7 @@ import org.humanbooster.bank.model.rpg.Warrior;
 import org.humanbooster.bank.model.rpg.Wizard;
 import org.humanbooster.bank.model.vehicule.Boat;
 import org.humanbooster.bank.model.vehicule.Car;
+import org.humanbooster.bank.model.vehicule.Owner;
 import org.humanbooster.bank.model.vehicule.Plane;
 
 public class MainEntry {
@@ -64,8 +65,18 @@ public class MainEntry {
     public static void testVehicule(){
         Boat boat1 = new Boat("Zodiac",580);
         Car car1 = new Car("Ferrari",650);
+        Car car2 = new Car("Ferrari",900);
         Plane plane1 = new Plane("Airbus",3000);
+        Plane plane2 = new Plane("Ferrari",9000);
 
+        Owner moi = new Owner("Anthony");
+
+        moi.add(car1);
+        moi.add(car2);
+        moi.add(plane1);
+        moi.add(plane2);
+        System.out.println("nb vehicule ferrari");
+        System.out.println(moi.countByBrand("Ferrari"));
         boat1.Start();
         boat1.Stop();
         boat1.DisplayEngine();
