@@ -9,8 +9,8 @@ public abstract class Vehicule {
         this.engine = engine;
     }
 
-    public abstract void Start();
-    public abstract void Stop();
+    public abstract void start();
+    public abstract void stop();
 
     public final void  DisplayEngine(){
         System.out.println("Le vehicule "+this.brand+" a une puissance de "+this.engine);

@@ -6,12 +6,12 @@ public class Car extends Vehicule{
     }
 
     @Override
-    public void Start() {
+    public void start() {
         System.out.println("La voiture "+this.brand+" prend la route");
     }
 
     @Override
-    public void Stop() {
+    public void stop() {
         System.out.println("La voiture "+this.brand+" s'arrete sur le bas cote");
     }
 }

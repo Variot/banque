@@ -20,4 +20,16 @@ public class Owner {
     public void add(Vehicule v){
         this.vehiculeList.add(v);
     }
+
+    public void startAllVehicules(){
+        for (Vehicule vehicule : this.vehiculeList) {
+            vehicule.start();
+            if (vehicule.getClass() == Boat.class){
+                ((Boat) vehicule).sail();
+            }else if (vehicule.getClass() == Plane.class){
+                ((Plane) vehicule).fly();
+            }
+
+        }
+    }
 }

@@ -7,12 +7,16 @@ public class Boat extends Vehicule{
     }
 
     @Override
-    public void Start() {
+    public void start() {
         System.out.println("Le bateau "+this.brand+" leve l'ancre");
     }
 
     @Override
-    public void Stop() {
+    public void stop() {
         System.out.println("Le bateau "+this.brand+" jette son ancre");
+    }
+
+    public void sail(){
+        System.out.println("Le bateau vogue");
     }
 }
