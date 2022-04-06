@@ -4,6 +4,7 @@ import org.humanbooster.bank.model.CompteEpargne;
 import org.humanbooster.bank.model.ComptePayant;
 import org.humanbooster.bank.model.CompteSimple;
 import org.humanbooster.bank.model.rpg.Berserker;
+import org.humanbooster.bank.model.rpg.Humanoid;
 import org.humanbooster.bank.model.rpg.Warrior;
 import org.humanbooster.bank.model.rpg.Wizard;
 import org.humanbooster.bank.model.vehicule.Boat;
@@ -11,11 +12,15 @@ import org.humanbooster.bank.model.vehicule.Car;
 import org.humanbooster.bank.model.vehicule.Owner;
 import org.humanbooster.bank.model.vehicule.Plane;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
 public class MainEntry {
     public static void main(String[] args) {
-        testVehicule();
+        //testVehicule();
         //testBank();
-        //testRpg();
+        testRpg();
     }
 
     public static void testBank(){
@@ -53,6 +58,22 @@ public class MainEntry {
         Wizard gandalf = new Wizard("Gandalf le gris",200,10,30,50);
         Berserker kratos = new Berserker("Kratos",500,200);
         Warrior castex = new Warrior("Jean Castex",250,10);
+
+        ArrayList<Humanoid> humans = new ArrayList<>();
+        humans.add(gandalf);
+        humans.add(kratos);
+        humans.add(castex);
+
+        for (Humanoid human : humans) {
+            System.out.println(human);
+        }
+        Collections.sort(humans);
+        for (Humanoid human : humans) {
+            System.out.println(human);
+        }
+
+
+        /**
         gandalf.attack(castex);
         gandalf.activateShield();
         castex.attack(gandalf);
@@ -61,6 +82,7 @@ public class MainEntry {
         kratos.addRage(20);
         kratos.useRage(castex);
         gandalf.spellCast(kratos);
+         **/
     }
     public static void testVehicule(){
         Boat boat1 = new Boat("Zodiac",580);

@@ -1,6 +1,6 @@
 package org.humanbooster.bank.model.rpg;
 
-public abstract class Humanoid {
+public abstract class Humanoid implements Comparable<Humanoid>{
     protected String name;
     protected double health;
     protected int force;
@@ -22,5 +22,15 @@ public abstract class Humanoid {
     }
     public String toString(){
         return this.name+" a "+this.health+"HP";
+    }
+
+    @Override
+    public int compareTo(Humanoid o) {
+        if (this.force < o.force)
+            return -1;
+        else if(this.force > o.force)
+            return 1;
+        else
+            return 0;
     }
 }
